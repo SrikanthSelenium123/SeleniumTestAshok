@@ -62,10 +62,6 @@ public class JSAlertClass {
 		Thread.sleep(5000);
 		js.executeScript(
 				"document.evaluate(\"//input[@name='search']\",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue.value='Test'");
-		// WebElement ele = d.findElement(By.xpath("//input[@name='search']"));
-		// js.executeScript("arguments[0].value='Selenium'", ele);
-		Thread.sleep(5000);
-		// js.executeScript("document.getElementsByName('search')[0].value='Selenium'");
 		String str = (String) js.executeScript("return document.getElementById('searchInput').value");
 		System.out.println(str);
 		d.findElement(By.xpath("//input[@placeholder='Search Wikipedia']")).click();

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestSuite">
+	<test name="Test1">
+		<classes>
+			<class name="selenium.testng.TestClass" />
+			<methods>
+				<exclude name="a" />
+			</methods>
+		</classes>
+	</test>
+	<test name="Test2">
+		<classes>
+			<class name="selenium.testng.TestClass2" />
+			<methods>
+				<include name="b" />
+			</methods>
+		</classes>
+	</test>
+	<test name="Tes3">
+		<classes>
+			<class name="selenium.testng.TestClass3" />
+			<methods>
+				<include name="c" />
+			</methods>
+		</classes>
+	</test>
+</suite>

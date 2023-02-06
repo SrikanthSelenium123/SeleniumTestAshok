@@ -24,13 +24,7 @@ public class GridClass {
 			cap.setPlatform(Platform.ANY);
 			cap.setBrowserName(browser);
 		}
-		d = getremoteDriver();
-	}
-
-	public WebDriver getremoteDriver() throws MalformedURLException {
-
 		d = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
-		return d;
 	}
 
 	@AfterMethod

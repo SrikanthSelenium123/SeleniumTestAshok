@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 
 public class GridClass {
 
-	public WebDriver d;
+	public static WebDriver d;
 	DesiredCapabilities cap;
 
 	public void setUp(String browser) throws MalformedURLException {
@@ -24,7 +24,13 @@ public class GridClass {
 			cap.setPlatform(Platform.ANY);
 			cap.setBrowserName(browser);
 		}
+		d = getremoteDriver();
+	}
+
+	public WebDriver getremoteDriver() throws MalformedURLException {
+
 		d = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+		return d;
 	}
 
 	@AfterMethod
